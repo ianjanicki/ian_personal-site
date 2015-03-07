@@ -1,3 +1,13 @@
 body {
-  background-image: "/images/dolo.jpg"
+  background-color:#4FCAE6;
+  text-align: center;
+  padding-top:10em;
+  font-family: helvetica;
+  font-size: 1.5em;
+}
+
+* { color:#48617D; text-decoration: none;}
+
+table {
+  margin: 0 auto;
 }
