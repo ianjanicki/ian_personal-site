@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
 body {
-  background: url('/images/blur.jpeg') no-repeat center center fixed;
+  background: url(/images/blur.jpeg) no-repeat center center fixed;
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
 }
