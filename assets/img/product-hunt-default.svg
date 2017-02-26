@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="22px" viewBox="0 0 28 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>product-hunt-default</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="product-hunt-default">
+            <g transform="translate(3.000000, 0.000000)">
+                <path d="M22,11 C22,17.0751167 17.0751167,22 11,22 C4.92488333,22 0,17.0751167 0,11 C0,4.92488333 4.92488333,0 11,0 C17.0751167,0 22,4.92488333 22,11" id="Fill-1" fill-opacity="0.2" fill="#000000"></path>
+                <path d="M12.4666667,10.9999633 L12.4666667,11.000055 L9.35,11.000055 L9.35,7.700055 L12.4666667,7.700055 L12.4666667,7.69996333 C13.377925,7.69996333 14.1166667,8.438705 14.1166667,9.34996333 C14.1166667,10.2612217 13.377925,10.9999633 12.4666667,10.9999633 M12.4666667,5.49996333 L12.4666667,5.500055 L7.15,5.49996333 L7.15,16.4999633 L9.35,16.4999633 L9.35,13.200055 L12.4666667,13.200055 L12.4666667,13.1999633 C14.5929667,13.1999633 16.3166667,11.4762633 16.3166667,9.34996333 C16.3166667,7.22366333 14.5929667,5.49996333 12.4666667,5.49996333" id="Fill-3" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>
