@@ -298,7 +298,6 @@ body {
                     align-items: left;
                     flex-direction: column;
                     position: relative;
-                    overflow: hidden;
 
                     .mobileContainer {
                         height: 292px;
@@ -368,7 +367,6 @@ body {
                     .desktopImage {
                         height: 290px;
                         max-width: 460px;
-                        // background-image: url(../img/visual_studio.png);
                         background-size: auto 100%;
                         background-repeat: no-repeat;
 
