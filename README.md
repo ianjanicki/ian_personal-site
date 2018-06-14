@@ -1,4 +1,9 @@
 ianjanicki.github.io
 ====================
 
-Personal Site
+To develop:
+
+```shell
+$ npm install
+$ npm start
+```
