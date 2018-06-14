@@ -4,7 +4,7 @@
   "description": "personal site",
   "main": "index.js",
   "scripts": {
-    "start": "serve docs"
+    "start": "http-server"
   },
   "repository": {
     "type": "git",
@@ -16,8 +16,7 @@
     "url": "https://github.com/ianjanicki/ianjanicki.github.io/issues"
   },
   "homepage": "https://github.com/ianjanicki/ianjanicki.github.io#readme",
-  "dependencies": {},
   "devDependencies": {
-    "serve": "^8.2.0"
+    "http-server": "^0.11.1"
   }
 }
