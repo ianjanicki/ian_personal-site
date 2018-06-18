@@ -4,7 +4,9 @@
   "description": "personal site",
   "main": "index.js",
   "scripts": {
-    "start": "http-server"
+    "build": "sass assets/css/main.scss assets/css/main.min.css",
+    "watch": "watch 'npm run build' assets",
+    "start": "concurrently http-server 'npm run watch'"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,9 @@
   },
   "homepage": "https://github.com/ianjanicki/ianjanicki.github.io#readme",
   "devDependencies": {
-    "http-server": "^0.11.1"
+    "concurrently": "^3.5.1",
+    "http-server": "^0.11.1",
+    "sass": "^1.5.1",
+    "watch": "^1.0.2"
   }
 }

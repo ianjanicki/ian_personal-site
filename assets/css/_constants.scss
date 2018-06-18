@@ -1,19 +1,21 @@
 /* main: main.scss*/
+
 $color-gray-lgt: #FAFAFA;
 $color-gray-med: #9899B3;
 $color-gray-drk: #4A4A4A;
 $color-blue: #2979FF;
-$color-nav-active: rgba(0,0,28,1);
-$color-nav-inactive: rgba(0,0,28,.5);
-
-$social-inactive-color: rgba(0,0,0,.2);
+$color-nav-active: rgba(0, 0, 28, 1);
+$color-nav-inactive: rgba(0, 0, 28, .5);
+$social-inactive-color: rgba(0, 0, 0, .2);
 $button-color: #448AFF;
 $button-color-hover: #2979FF;
-
 $width-xs: 30 !default;
 $width-sm: 48 !default;
 $width-md: 75 !default;
 $width-lg: 125 !default;
-
-$font-museo: "museo-sans", arial, sans-serif;
-$font-activ: "activ-grotesk", arial, sans-serif;
+$font-museo: "museo-sans",
+arial,
+sans-serif;
+$font-activ: "activ-grotesk",
+arial,
+sans-serif;
