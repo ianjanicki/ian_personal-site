@@ -287,8 +287,11 @@ body {
             &:nth-child(1) {
               z-index: 2;
 
-              .mobileImage {
+              #offset {
                 background-image: url(../img/offset_1.png);
+              }
+              #mealstack {
+                background-image: url(../img/mealstack_1.png);
               }
             }
 
@@ -298,8 +301,11 @@ body {
               left: 90px;
               z-index: 1;
 
-              .mobileImage {
+              #offset {
                 background-image: url(../img/offset_2.png);
+              }
+              #mealstack {
+                background-image: url(../img/mealstack_2.png);
               }
 
               @media (min-width: $viewport-sm) and (max-width: $viewport-md) {
@@ -319,8 +325,11 @@ body {
               left: 178px;
               z-index: 0;
 
-              .mobileImage {
+              #offset {
                 background-image: url(../img/offset_3.png);
+              }
+              #mealstack {
+                background-image: url(../img/mealstack_3.png);
               }
 
               @media (min-width: $viewport-sm) and (max-width: $viewport-md) {

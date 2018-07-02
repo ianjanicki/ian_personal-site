@@ -1020,8 +1020,11 @@ body {
 .content #work .workContainer .project .multipleContainer .mobileContainer:nth-child(1) {
   z-index: 2;
 }
-.content #work .workContainer .project .multipleContainer .mobileContainer:nth-child(1) .mobileImage {
+.content #work .workContainer .project .multipleContainer .mobileContainer:nth-child(1) #offset {
   background-image: url(../img/offset_1.png);
+}
+.content #work .workContainer .project .multipleContainer .mobileContainer:nth-child(1) #mealstack {
+  background-image: url(../img/mealstack_1.png);
 }
 .content #work .workContainer .project .multipleContainer .mobileContainer:nth-child(2) {
   transform: scale(0.96);
@@ -1029,8 +1032,11 @@ body {
   left: 90px;
   z-index: 1;
 }
-.content #work .workContainer .project .multipleContainer .mobileContainer:nth-child(2) .mobileImage {
+.content #work .workContainer .project .multipleContainer .mobileContainer:nth-child(2) #offset {
   background-image: url(../img/offset_2.png);
+}
+.content #work .workContainer .project .multipleContainer .mobileContainer:nth-child(2) #mealstack {
+  background-image: url(../img/mealstack_2.png);
 }
 @media (min-width: 48em) and (max-width: 75em) {
   .content #work .workContainer .project .multipleContainer .mobileContainer:nth-child(2) {
@@ -1053,8 +1059,11 @@ body {
   left: 178px;
   z-index: 0;
 }
-.content #work .workContainer .project .multipleContainer .mobileContainer:nth-child(3) .mobileImage {
+.content #work .workContainer .project .multipleContainer .mobileContainer:nth-child(3) #offset {
   background-image: url(../img/offset_3.png);
+}
+.content #work .workContainer .project .multipleContainer .mobileContainer:nth-child(3) #mealstack {
+  background-image: url(../img/mealstack_3.png);
 }
 @media (min-width: 48em) and (max-width: 75em) {
   .content #work .workContainer .project .multipleContainer .mobileContainer:nth-child(3) {
