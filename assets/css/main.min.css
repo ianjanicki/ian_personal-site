@@ -714,115 +714,10 @@ body {
   flex-direction: column;
 }
 
-.navBar {
-  position: fixed;
-  min-width: 100%;
-}
-.navBar .label-toggle {
-  cursor: pointer;
-  display: block;
-  float: right;
-  z-index: 3;
-  margin-right: 25px;
-  margin-top: 30px;
-  padding: 10px;
-  background-color: #FAFAFA;
-  border-radius: 4px;
-}
-.navBar .label-toggle i {
-  color: #4A4A4A;
-}
-@media (min-width: 30em) {
-  .navBar .label-toggle {
-    display: none;
-  }
-}
-.navBar #menu-toggle {
-  display: none;
-}
-.navBar #menu-toggle:checked ~ .navWrapper {
-  opacity: 1;
-  height: 127px;
-  visibility: visible;
-}
-.navBar #menu-toggle:checked ~ ul {
-  opacity: 1;
-  visibility: visible;
-}
-.navBar .navWrapper {
-  z-index: 4;
-  padding: 40px 35px;
-  background-color: #FAFAFA;
-  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.1);
-  font-family: "museo-sans", arial, sans-serif;
-  visibility: hidden;
-}
-.navBar .navWrapper ul {
-  padding: 0;
-  margin: 0;
-  display: block;
-  list-style-type: none;
-  line-height: 24px;
-  transition: all 300ms ease;
-}
-.navBar .navWrapper ul a {
-  transition: color 300ms ease;
-  font-weight: 900;
-  font-size: 12px;
-  color: rgba(0, 0, 28, 0.5);
-  text-decoration: none;
-  transition: all 300ms ease;
-}
-.navBar .navWrapper ul a li {
-  display: block;
-  text-transform: uppercase;
-  margin-bottom: 28px;
-}
-@media (min-width: 30em) {
-  .navBar .navWrapper ul a li {
-    display: inline-block;
-    margin-bottom: 0;
-    margin-right: 60px;
-  }
-}
-.navBar .navWrapper ul a:last-of-type > li {
-  margin-bottom: 0px;
-}
-.navBar .navWrapper ul a.active {
-  color: #00001c;
-}
-.navBar .navWrapper ul a.active span {
-  border-bottom: solid 2px #2979FF;
-}
-.navBar .navWrapper ul a:hover {
-  color: #00001c;
-}
-@media (min-width: 30em) {
-  .navBar .navWrapper ul {
-    display: block;
-    list-style-type: none;
-    opacity: 1;
-    transition: all 300ms ease;
-    visibility: visible;
-    margin-bottom: 0;
-  }
-}
-@media (min-width: 30em) and (max-width: 75em) {
-  .navBar .navWrapper {
-    padding: 40px 55px;
-  }
-}
-@media (min-width: 30em) {
-  .navBar {
-    background-color: red;
-  }
-}
-
 .content {
   flex: 1;
 }
 .content #about {
-  background-color: #FAFAFA;
   overflow: hidden;
 }
 .content #about .sketchbookContainer {
@@ -1367,7 +1262,6 @@ body {
   margin: 0;
   height: 70px;
   color: #9899B3;
-  background-color: #F3F3F3;
   font-size: 12px;
   font-family: "aktiv-grotesk", sans-serif;
 }

@@ -1,6 +1,6 @@
-@import "constants";
-@import "tags";
-@import "flexboxgrid";
+@import 'constants';
+@import 'tags';
+@import 'flexboxgrid';
 
 // Base Styles
 body {
@@ -11,466 +11,533 @@ body {
   flex-direction: column;
 }
 
-.navBar {
-  position: fixed;
-  min-width: 100%;
-
-  .label-toggle {
-      cursor: pointer;
-      display: block;
-      float: right;
-      z-index: 3;
-      margin-right: 25px;
-      margin-top: 30px;
-      padding: 10px;
-      background-color: $color-gray-lgt;
-      border-radius: 4px;
-
-      i {
-          color: $color-gray-drk;
-      }
-
-      @media (min-width: $viewport-xs) {
-          display: none;
-      }
-  }
-
-  #menu-toggle {
-      display: none;
-
-      &:checked ~ .navWrapper {
-        opacity: 1;
-        height: 127px;
-        visibility: visible;
-      }
-
-      &:checked ~ ul {
-        opacity: 1;
-        visibility: visible;
-      }
-  }
-
-  .navWrapper {
-    z-index: 4;
-    padding: 40px 35px;
-    background-color: $color-gray-lgt;
-    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.10);
-    font-family: $font-museo;
-    visibility: hidden;
-
-        ul {
-            padding: 0;
-            margin: 0;
-            display: block;
-            list-style-type: none;
-            // opacity: 0;
-            // visibility: hidden;
-            line-height: 24px;
-            transition: all 300ms ease;
-
-            a {
-                transition: color 300ms ease;
-                font-weight: 900;
-                font-size: 12px;
-                color: $color-nav-inactive;
-                text-decoration: none;
-                transition: all 300ms ease;
-
-                li  {
-                     display: block;
-                     text-transform: uppercase;
-                     margin-bottom: 28px;
-
-                     @media (min-width: $viewport-xs) {
-                         display: inline-block;
-                         margin-bottom: 0;
-                         margin-right: 60px;
-                     }
-                 }
-
-                 &:last-of-type > li {
-                     margin-bottom: 0px;
-                 }
-
-                 &.active {
-                    color: $color-nav-active;
-
-                    span {
-                        border-bottom: solid 2px $color-blue;
-                    }
-                 }
-
-                 &:hover {
-                   color: $color-nav-active;
-                 }
-            }
-
-            @media (min-width: $viewport-xs) {
-                display: block;
-                list-style-type: none;
-                opacity: 1;
-                transition: all 300ms ease;
-                visibility: visible;
-                margin-bottom: 0;
-            }
-        }
-        @media (min-width: $viewport-xs) and (max-width: $viewport-md){padding: 40px 55px;}
-    }
-    @media (min-width: $viewport-xs) {background-color: red;}
-}
-
 .content {
-    flex: 1;
+  flex: 1;
 
-    #about {
-        background-color: $color-gray-lgt;
+  #about {
+    overflow: hidden;
+
+    .sketchbookContainer {
+      position: absolute;
+      overflow: hidden;
+      width: 100vw;
+      height: 1500px;
+
+      .sketchbook {
+        position: absolute;
+        float: right;
+        visibility: hidden;
+        transform: rotate(-20deg);
+
         overflow: hidden;
 
-        .sketchbookContainer {
-            position: absolute;
+        @media (min-width: $viewport-xs) and (max-width: $viewport-sm) {
+          visibility: hidden;
+        }
+        @media (min-width: $viewport-sm) and (max-width: $viewport-md) {
+          visibility: visible;
+          max-width: 820px;
+          left: 55%;
+          top: 5%;
+        }
+        @media (min-width: $viewport-md) and (max-width: $viewport-lg) {
+          visibility: visible;
+          max-width: 1200px;
+          left: 55%;
+        }
+        @media (min-width: $viewport-lg) {
+          visibility: visible;
+          max-width: 1200px;
+          left: 55%;
+          top: 20%;
+        }
+      }
+    }
+
+    .aboutContainer {
+      margin: 37px 35px 60px 35px;
+      padding: 0;
+
+      .about1 {
+        margin-bottom: 60px;
+
+        .hi {
+          font-size: 26px;
+          font-weight: 900;
+          font-family: $font-museo;
+          display: inline-flex;
+
+          @media (min-width: $viewport-xs) and (max-width: $viewport-sm) {
+            font-size: 32px;
+          }
+          @media (min-width: $viewport-sm) and (max-width: $viewport-md) {
+            font-size: 44px;
+          }
+          @media (min-width: $viewport-md) and (max-width: $viewport-lg) {
+            font-size: 50px;
+          }
+          @media (min-width: $viewport-lg) {
+            font-size: 72px;
+          }
+        }
+
+        .emoji {
+          height: 28px;
+          margin-left: 6px;
+
+          @media (min-width: $viewport-xs) and (max-width: $viewport-sm) {
+            height: 33px;
+            margin-left: 7px;
+          }
+          @media (min-width: $viewport-sm) and (max-width: $viewport-md) {
+            height: 45px;
+            margin-left: 11px;
+          }
+          @media (min-width: $viewport-md) and (max-width: $viewport-lg) {
+            height: 51px;
+            margin-left: 11px;
+          }
+          @media (min-width: $viewport-lg) {
+            height: 51px;
+            margin-left: 11px;
+          }
+        }
+
+        span {
+          font-size: 16px;
+          font-weight: 100;
+          line-height: 21px;
+          font-family: $font-museo;
+          color: $color-gray-drk;
+
+          a {
+            border-bottom: 1px solid $color-blue;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: 300;
+          }
+
+          @media (min-width: $viewport-xs) and (max-width: $viewport-sm) {
+            font-size: 18px;
+            line-height: 26px;
+          }
+          @media (min-width: $viewport-sm) and (max-width: $viewport-md) {
+            font-size: 18px;
+            line-height: 26px;
+          }
+          @media (min-width: $viewport-md) and (max-width: $viewport-lg) {
+            font-size: 24px;
+            line-height: 34px;
+          }
+          @media (min-width: $viewport-lg) {
+            font-size: 24px;
+            line-height: 34px;
+          }
+        }
+      }
+
+      .about2 {
+        margin: 0 0 50px 0;
+        // max-width: 234px;
+
+        .col-xs {
+          padding: 0;
+        }
+
+        .social {
+          transition: all 300ms ease;
+          cursor: pointer;
+          height: 22px;
+          width: 28px;
+          margin-right: 24px;
+
+          @media (min-width: $viewport-xs) and (max-width: $viewport-sm) {
+            margin-right: 30px;
+          }
+          @media (min-width: $viewport-sm) and (max-width: $viewport-md) {
+            margin-right: 30px;
+          }
+          @media (min-width: $viewport-md) and (max-width: $viewport-lg) {
+            margin-right: 30px;
+          }
+          @media (min-width: $viewport-lg) {
+            margin-right: 38px;
+          }
+        }
+
+        .twitter {
+          background: url(../img/twitter-default.svg) no-repeat;
+          &:hover {
+            background: url(../img/twitter-active.svg) no-repeat;
+          }
+        }
+        .medium {
+          background: url(../img/medium-default.svg) no-repeat;
+          &:hover {
+            background: url(../img/medium-active.svg) no-repeat;
+          }
+        }
+        .linkedin {
+          background: url(../img/linkedin-default.svg) no-repeat;
+          &:hover {
+            background: url(../img/linkedin-active.svg) no-repeat;
+          }
+        }
+        .angellist {
+          background: url(../img/angel-list-default.svg) no-repeat;
+          &:hover {
+            background: url(../img/angel-list-active.svg) no-repeat;
+          }
+        }
+        .producthunt {
+          background: url(../img/product-hunt-default.svg) no-repeat;
+          &:hover {
+            background: url(../img/product-hunt-active.svg) no-repeat;
+          }
+        }
+
+        @media (max-width: $viewport-xs) {
+          margin-bottom: 50px;
+        }
+      }
+
+      .about3 {
+        flex: 0 1 auto;
+        margin: 0;
+      }
+      @media (min-width: $viewport-xs) and (max-width: $viewport-sm) {
+        margin: 165px 55px 110px 55px;
+      }
+      @media (min-width: $viewport-sm) and (max-width: $viewport-md) {
+        margin: 165px 85px 110px 85px;
+        max-width: calc(50vw - 85px);
+      }
+      @media (min-width: $viewport-md) and (max-width: $viewport-lg) {
+        margin: 165px 120px 245px 120px;
+        max-width: calc(40vw - 120px);
+      }
+      @media (min-width: $viewport-lg) {
+        margin: 165px 300px 320px 300px;
+        max-width: calc(40vw - 300px);
+      }
+    }
+  }
+
+  #work {
+    .workContainer {
+      padding: 80px 35px 140px 35px;
+
+      .project {
+        margin-bottom: 250px;
+
+        h4 {
+          margin: 0 0 40px 0;
+        }
+
+        p > a {
+          color: darken($color-gray-med, 10%);
+          text-decoration: none;
+          cursor: pointer;
+          font-weight: 300;
+        }
+
+        span {
+          display: block;
+          font-weight: 500;
+          font-family: 'aktiv-grotesk', sans-serif;
+          color: $color-gray-med;
+          font-size: 10px;
+          text-transform: uppercase;
+          margin-top: 10px;
+          line-height: normal;
+          letter-spacing: 0.42px;
+
+          a {
+            color: $color-blue;
+          }
+
+          @media (min-width: $viewport-xs) and (max-width: $viewport-sm) {
+            font-size: 10px;
+          }
+          @media (min-width: $viewport-sm) and (max-width: $viewport-md) {
+            font-size: 12px;
+          }
+          @media (min-width: $viewport-md) and (max-width: $viewport-lg) {
+            font-size: 12px;
+          }
+          @media (min-width: $viewport-lg) {
+            font-size: 14px;
+          }
+        }
+
+        .multipleContainer {
+          margin: 0 -35px 30px 0;
+          display: flex;
+          align-items: left;
+          flex-direction: column;
+          position: relative;
+
+          .mobileContainer {
+            height: 292px;
             overflow: hidden;
-            width: 100vw;
-            height: 1500px;
+            width: 164px;
+            flex-shrink: 2;
+            box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.2);
 
-            .sketchbook {
-                position: absolute;
-                float: right;
-                visibility: hidden;
-                transform: rotate(-20deg);
+            &:nth-child(1) {
+              z-index: 2;
 
-                overflow: hidden;
-
-                @media (min-width: $viewport-xs) and (max-width: $viewport-sm){
-                    visibility: hidden;
-                }
-                @media (min-width: $viewport-sm) and (max-width: $viewport-md){
-                    visibility: visible;
-                    max-width: 820px;
-                    left: 55%;
-                    top: 5%;
-                }
-                @media (min-width: $viewport-md) and (max-width: $viewport-lg){
-                    visibility: visible;
-                    max-width: 1200px;
-                    left: 55%;
-                    // top: 10%;
-                }
-                @media (min-width: $viewport-lg) {
-                    visibility: visible;
-                    max-width: 1200px;
-                    left: 55%;
-                    top: 20%;
-                }
+              .mobileImage {
+                background-image: url(../img/offset_1.png);
+              }
             }
+
+            &:nth-child(2) {
+              transform: scale(0.96);
+              position: absolute;
+              left: 90px;
+              z-index: 1;
+
+              .mobileImage {
+                background-image: url(../img/offset_2.png);
+              }
+
+              @media (min-width: $viewport-sm) and (max-width: $viewport-md) {
+                left: 138px;
+              }
+              @media (min-width: $viewport-md) and (max-width: $viewport-lg) {
+                left: 170px;
+              }
+              @media (min-width: $viewport-lg) {
+                left: 200px;
+              }
+            }
+
+            &:nth-child(3) {
+              transform: scale(0.92);
+              position: absolute;
+              left: 178px;
+              z-index: 0;
+
+              .mobileImage {
+                background-image: url(../img/offset_3.png);
+              }
+
+              @media (min-width: $viewport-sm) and (max-width: $viewport-md) {
+                left: 277px;
+              }
+              @media (min-width: $viewport-md) and (max-width: $viewport-lg) {
+                left: 338px;
+              }
+              @media (min-width: $viewport-lg) {
+                left: 400px;
+              }
+            }
+
+            .mobileImage {
+              height: 292px;
+              width: 164px;
+              background-size: auto 100%;
+              background-repeat: no-repeat;
+
+              @media (min-width: $viewport-sm) and (max-width: $viewport-md) {
+                height: 450px;
+                width: 253px;
+              }
+              @media (min-width: $viewport-md) and (max-width: $viewport-lg) {
+                height: 550px;
+                width: 309px;
+              }
+              @media (min-width: $viewport-lg) {
+                height: 650px;
+                width: 365px;
+              }
+            }
+
+            @media (min-width: $viewport-sm) and (max-width: $viewport-md) {
+              height: 450px;
+              width: 253px;
+              box-shadow: 0 23px 39px 0 rgba(0, 0, 0, 0.2);
+            }
+            @media (min-width: $viewport-md) and (max-width: $viewport-lg) {
+              height: 550px;
+              width: 309px;
+              box-shadow: 0 28px 47px 0 rgba(0, 0, 0, 0.2);
+            }
+            @media (min-width: $viewport-lg) {
+              height: 650px;
+              width: 365px;
+              box-shadow: 0 33px 55px 0 rgba(0, 0, 0, 0.2);
+            }
+          }
         }
 
-        .aboutContainer {
-            margin: 37px 35px 60px 35px;
-            padding: 0;
+        .desktopContainer {
+          height: 289px;
+          margin-bottom: 30px;
+          overflow: hidden;
+          margin-right: -35px;
+          box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.2);
+          max-width: 466px;
+          width: calc(100vw - 35px);
 
-            .about1 {
-                margin-bottom: 60px;
+          .desktopImage {
+            height: 290px;
+            max-width: 460px;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
 
-                .hi {
-                    font-size: 26px;
-                    font-weight: 900;
-                    font-family: $font-museo;
-                    display: inline-flex;
-
-                    @media (min-width: $viewport-xs) and (max-width: $viewport-sm){font-size: 32px;}
-                    @media (min-width: $viewport-sm) and (max-width: $viewport-md){font-size: 44px;}
-                    @media (min-width: $viewport-md) and (max-width: $viewport-lg){font-size: 50px;}
-                    @media (min-width: $viewport-lg) {font-size: 72px;}
-                }
-
-                .emoji {
-                    height: 28px;
-                    margin-left: 6px;
-
-                    @media (min-width: $viewport-xs) and (max-width: $viewport-sm){height: 33px; margin-left: 7px;}
-                    @media (min-width: $viewport-sm) and (max-width: $viewport-md){height: 45px; margin-left: 11px;}
-                    @media (min-width: $viewport-md) and (max-width: $viewport-lg){height: 51px; margin-left: 11px;}
-                    @media (min-width: $viewport-lg) {height: 51px; margin-left: 11px;}
-                }
-
-                span {
-                    font-size: 16px;
-                    font-weight: 100;
-                    line-height: 21px;
-                    font-family: $font-museo;
-                    color: $color-gray-drk;
-
-                    a {
-                        border-bottom: 1px solid $color-blue;
-                        text-decoration: none;
-                        cursor: pointer;
-                        font-weight: 300;
-                    }
-
-                    @media (min-width: $viewport-xs) and (max-width: $viewport-sm){font-size: 18px; line-height: 26px;}
-                    @media (min-width: $viewport-sm) and (max-width: $viewport-md){font-size: 18px; line-height: 26px;}
-                    @media (min-width: $viewport-md) and (max-width: $viewport-lg){font-size: 24px; line-height: 34px;}
-                    @media (min-width: $viewport-lg) {font-size: 24px; line-height: 34px;}
-                }
+            @media (min-width: $viewport-sm) and (max-width: $viewport-md) {
+              height: 450px;
+              max-width: 718px;
             }
-
-            .about2 {
-                margin: 0 0 50px 0;
-                // max-width: 234px;
-
-                .col-xs {
-                    padding: 0;
-                }
-
-                .social {
-                    transition: all 300ms ease;
-                    cursor: pointer;
-                    height: 22px;
-                    width: 28px;
-                    margin-right: 24px;
-
-                    @media (min-width: $viewport-xs) and (max-width: $viewport-sm){margin-right: 30px;}
-                    @media (min-width: $viewport-sm) and (max-width: $viewport-md){margin-right: 30px;}
-                    @media (min-width: $viewport-md) and (max-width: $viewport-lg){margin-right: 30px;}
-                    @media (min-width: $viewport-lg) {margin-right: 38px;}
-                }
-
-                .twitter {background: url(../img/twitter-default.svg) no-repeat; &:hover{background: url(../img/twitter-active.svg) no-repeat;}}
-                .medium {background: url(../img/medium-default.svg) no-repeat;&:hover{background: url(../img/medium-active.svg) no-repeat;}}
-                .linkedin {background: url(../img/linkedin-default.svg) no-repeat;&:hover{background: url(../img/linkedin-active.svg) no-repeat;}}
-                .angellist {background: url(../img/angel-list-default.svg) no-repeat;&:hover{background: url(../img/angel-list-active.svg) no-repeat;}}
-                .producthunt {background: url(../img/product-hunt-default.svg) no-repeat;&:hover{background: url(../img/product-hunt-active.svg) no-repeat;}}
-
-                @media (max-width: $viewport-xs){margin-bottom: 50px;}
+            @media (min-width: $viewport-md) and (max-width: $viewport-lg) {
+              height: 550px;
+              max-width: 878px;
             }
-
-            .about3 {
-                flex: 0 1 auto;
-                margin: 0;
+            @media (min-width: $viewport-lg) {
+              height: 650px;
+              max-width: 1037px;
             }
-            @media (min-width: $viewport-xs) and (max-width: $viewport-sm){margin: 165px 55px 110px 55px;}
-            @media (min-width: $viewport-sm) and (max-width: $viewport-md){margin: 165px 85px 110px 85px; max-width: calc(50vw - 85px);}
-            @media (min-width: $viewport-md) and (max-width: $viewport-lg){margin: 165px 120px 245px 120px; max-width: calc(40vw - 120px);}
-            @media (min-width: $viewport-lg) {margin: 165px 300px 320px 300px; max-width: calc(40vw - 300px);}
+          }
+
+          #zero {
+            background-image: url(../img/zero.png);
+          }
+          #visual_studio {
+            background-image: url(../img/visual_studio.png);
+          }
+          #insights {
+            background-image: url(../img/insights.png);
+          }
+
+          @media (min-width: $viewport-sm) and (max-width: $viewport-md) {
+            height: 450px;
+            max-width: 718px;
+            box-shadow: 0 23px 39px 0 rgba(0, 0, 0, 0.2);
+          }
+          @media (min-width: $viewport-md) and (max-width: $viewport-lg) {
+            height: 550px;
+            max-width: 878px;
+            box-shadow: 0 28px 47px 0 rgba(0, 0, 0, 0.2);
+          }
+          @media (min-width: $viewport-lg) {
+            height: 650px;
+            max-width: 1037px;
+            box-shadow: 0 33px 55px 0 rgba(0, 0, 0, 0.2);
+          }
         }
+
+        .button-secondary {
+          margin: 0;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0px;
+        }
+
+        @media (min-width: $viewport-xs) and (max-width: $viewport-sm) {
+          margin-bottom: 350px;
+        }
+        @media (min-width: $viewport-sm) and (max-width: $viewport-md) {
+          margin-bottom: 450px;
+        }
+        @media (min-width: $viewport-md) and (max-width: $viewport-lg) {
+          margin-bottom: 550px;
+        }
+        @media (min-width: $viewport-lg) {
+          margin-bottom: 650px;
+        }
+      }
+
+      @media (min-width: $viewport-xs) and (max-width: $viewport-sm) {
+        padding: 100px 55px 350px 55px;
+      }
+      @media (min-width: $viewport-sm) and (max-width: $viewport-md) {
+        padding: 150px 85px 450px 85px;
+      }
+      @media (min-width: $viewport-md) and (max-width: $viewport-lg) {
+        padding: 200px 120px 550px 120px;
+      }
+      @media (min-width: $viewport-lg) {
+        padding: 300px 300px 550px 300px;
+      }
     }
+  }
 
-    #work {
-        .workContainer {
-            padding: 80px 35px 140px 35px;
+  #words {
+    background-color: $color-gray-lgt;
 
-            .project {
-                margin-bottom: 250px;
+    .wordsContainer {
+      padding: 80px 35px;
 
-                h4 {
-                    margin: 0 0 40px 0;
-                }
+      .article {
+        margin-bottom: 130px;
 
-                p > a {
-                    color: darken($color-gray-med, 10%);
-                    text-decoration: none;
-                    cursor: pointer;
-                    font-weight: 300;
-                }
-
-                span {
-                    display: block;
-                    font-weight: 500;
-                    font-family: "aktiv-grotesk",sans-serif;
-                    color: $color-gray-med;
-                    font-size: 10px;
-                    text-transform: uppercase;
-                    margin-top: 10px;
-                    line-height: normal;
-                    letter-spacing: 0.42px;
-
-                    a {color: $color-blue}
-
-                    @media (min-width: $viewport-xs) and (max-width: $viewport-sm){font-size: 10px;}
-                    @media (min-width: $viewport-sm) and (max-width: $viewport-md){font-size: 12px;}
-                    @media (min-width: $viewport-md) and (max-width: $viewport-lg){font-size: 12px;}
-                    @media (min-width: $viewport-lg) {font-size: 14px;}
-                }
-
-                .multipleContainer {
-                    margin: 0 -35px 30px 0;
-                    display: flex;
-                    align-items: left;
-                    flex-direction: column;
-                    position: relative;
-
-                    .mobileContainer {
-                        height: 292px;
-                        overflow: hidden;
-                        width: 164px;
-                        flex-shrink: 2;
-                        box-shadow: 0 15px 25px 0 rgba(0,0,0,0.20);
-
-                        &:nth-child(1) {
-                            z-index: 2;
-
-                            .mobileImage {background-image: url(../img/offset_1.png);}
-                        }
-
-                        &:nth-child(2) {
-                            transform: scale(.96);
-                            position: absolute;
-                            left: 90px;
-                            z-index: 1;
-
-                            .mobileImage {background-image: url(../img/offset_2.png);}
-
-                            @media (min-width: $viewport-sm) and (max-width: $viewport-md){left: 138px;}
-                            @media (min-width: $viewport-md) and (max-width: $viewport-lg){left: 170px;}
-                            @media (min-width: $viewport-lg) {left: 200px;}
-                        }
-
-                        &:nth-child(3) {
-                            transform: scale(.92);
-                            position: absolute;
-                            left: 178px;
-                            z-index: 0;
-
-                            .mobileImage {background-image: url(../img/offset_3.png);}
-
-                            @media (min-width: $viewport-sm) and (max-width: $viewport-md){left: 277px;}
-                            @media (min-width: $viewport-md) and (max-width: $viewport-lg){left: 338px;}
-                            @media (min-width: $viewport-lg) {left: 400px;}
-                        }
-
-                        .mobileImage {
-                            height: 292px;
-                            width: 164px;
-                            background-size: auto 100%;
-                            background-repeat: no-repeat;
-
-                            @media (min-width: $viewport-sm) and (max-width: $viewport-md){height: 450px; width: 253px;}
-                            @media (min-width: $viewport-md) and (max-width: $viewport-lg){height: 550px; width: 309px;}
-                            @media (min-width: $viewport-lg) {height: 650px; width: 365px;}
-                        }
-
-                        @media (min-width: $viewport-sm) and (max-width: $viewport-md){height: 450px; width: 253px; box-shadow: 0 23px 39px 0 rgba(0,0,0,0.20);}
-                        @media (min-width: $viewport-md) and (max-width: $viewport-lg){height: 550px; width: 309px; box-shadow: 0 28px 47px 0 rgba(0,0,0,0.20);}
-                        @media (min-width: $viewport-lg) {height: 650px; width: 365px; box-shadow: 0 33px 55px 0 rgba(0,0,0,0.20);}
-                    }
-                }
-
-                .desktopContainer {
-                    height: 289px;
-                    margin-bottom: 30px;
-                    overflow: hidden;
-                    margin-right: -35px;
-                    box-shadow: 0 15px 25px 0 rgba(0,0,0,0.20);
-                    max-width: 466px;
-                    width: calc(100vw - 35px);
-
-                    .desktopImage {
-                        height: 290px;
-                        max-width: 460px;
-                        background-size: auto 100%;
-                        background-repeat: no-repeat;
-
-                        @media (min-width: $viewport-sm) and (max-width: $viewport-md){height: 450px; max-width: 718px;}
-                        @media (min-width: $viewport-md) and (max-width: $viewport-lg){height: 550px; max-width: 878px;}
-                        @media (min-width: $viewport-lg) {height: 650px; max-width: 1037px;}
-                    }
-
-                    #zero {background-image: url(../img/zero.png);}
-                    #visual_studio {background-image: url(../img/visual_studio.png);}
-                    #insights {background-image: url(../img/insights.png);}
-
-                    @media (min-width: $viewport-sm) and (max-width: $viewport-md){height: 450px; max-width: 718px; box-shadow: 0 23px 39px 0 rgba(0,0,0,0.20);}
-                    @media (min-width: $viewport-md) and (max-width: $viewport-lg){height: 550px; max-width: 878px; box-shadow: 0 28px 47px 0 rgba(0,0,0,0.20);}
-                    @media (min-width: $viewport-lg) {height: 650px; max-width: 1037px; box-shadow: 0 33px 55px 0 rgba(0,0,0,0.20);}
-                }
-
-                .button-secondary {
-                    margin: 0;
-                }
-
-                &:last-of-type {
-                    margin-bottom: 0px;
-                }
-
-                @media (min-width: $viewport-xs) and (max-width: $viewport-sm){margin-bottom: 350px;}
-                @media (min-width: $viewport-sm) and (max-width: $viewport-md){margin-bottom: 450px;}
-                @media (min-width: $viewport-md) and (max-width: $viewport-lg){margin-bottom: 550px;}
-                @media (min-width: $viewport-lg) {margin-bottom: 650px;}
-            }
-
-            @media (min-width: $viewport-xs) and (max-width: $viewport-sm){padding: 100px 55px 350px 55px;}
-            @media (min-width: $viewport-sm) and (max-width: $viewport-md){padding: 150px 85px 450px 85px;}
-            @media (min-width: $viewport-md) and (max-width: $viewport-lg){padding: 200px 120px 550px 120px;}
-            @media (min-width: $viewport-lg) {padding: 300px 300px 550px 300px;}
+        &:last-of-type {
+          margin-bottom: 0px;
         }
+      }
+
+      @media (min-width: $viewport-xs) and (max-width: $viewport-sm) {
+        padding: 100px 55px;
+      }
+      @media (min-width: $viewport-sm) and (max-width: $viewport-md) {
+        padding: 110px 85px;
+      }
+      @media (min-width: $viewport-md) and (max-width: $viewport-lg) {
+        padding: 160px 120px;
+      }
+      @media (min-width: $viewport-lg) {
+        padding: 200px 300px;
+      }
     }
-
-    #words {
-        background-color: $color-gray-lgt;
-
-        .wordsContainer {
-            padding: 80px 35px;
-
-            .article {
-                margin-bottom: 130px;
-
-                &:last-of-type {
-                    margin-bottom: 0px;
-                }
-            }
-
-            @media (min-width: $viewport-xs) and (max-width: $viewport-sm){padding: 100px 55px;}
-            @media (min-width: $viewport-sm) and (max-width: $viewport-md){padding: 110px 85px;}
-            @media (min-width: $viewport-md) and (max-width: $viewport-lg){padding: 160px 120px;}
-            @media (min-width: $viewport-lg) {padding: 200px 300px;}
-        }
-    }
+  }
 }
 
 .footer {
-    margin: 0;
-    height: 70px;
-    color: $color-gray-med;
-    background-color: #F3F3F3;
-    font-size: 12px;
-    font-family: "aktiv-grotesk",sans-serif;
+  margin: 0;
+  height: 70px;
+  color: $color-gray-med;
+  font-size: 12px;
+  font-family: 'aktiv-grotesk', sans-serif;
 }
 
-html.w-mod-js *[data-ix="work-transition"] {
+html.w-mod-js *[data-ix='work-transition'] {
   opacity: 0;
   transform: translate(0px, 65px);
 }
 
-html.w-mod-js *[data-ix="text-slide"] {
+html.w-mod-js *[data-ix='text-slide'] {
   opacity: 0;
   transform: translate(-25px, 0px);
 }
 
-html.w-mod-js *[data-ix="header-transition"] {
+html.w-mod-js *[data-ix='header-transition'] {
   opacity: 0;
   transform: translate(-25px, 0px);
 }
 
-html.w-mod-js *[data-ix="logo-animation"] {
+html.w-mod-js *[data-ix='logo-animation'] {
   opacity: 0;
   transform: translate(-23px, 0px);
 }
 
-html.w-mod-js *[data-ix="text-slide-2"] {
+html.w-mod-js *[data-ix='text-slide-2'] {
   opacity: 0;
   transform: translate(-25px, 0px);
 }
 
-html.w-mod-js *[data-ix="social"] {
+html.w-mod-js *[data-ix='social'] {
   opacity: 0;
   transform: translate(-25px, 0px);
 }
 
-html.w-mod-js *[data-ix="work-fade"] {
+html.w-mod-js *[data-ix='work-fade'] {
   opacity: 1;
   transform: translate(0px, 0px);
 }
 
-html.w-mod-js *[data-ix="new-interaction"] {
+html.w-mod-js *[data-ix='new-interaction'] {
   transform: translate(0px, 0px);
 }
